@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://kit.fontawesome.com/d0f5b43b47.js" crossorigin="anonymous"></script>
+	<title>job Application Form</title>
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body>
+	<div class="main-container">
+		<div class="form-container">
+			<form class="main-form">
+				<div class="form-header">
+					<span class="headings">Job Application Form</span>
+					<span class="light-text">please fill up the below form to submit your job application</span>
+				</div>
+				<hr>
+				<div class="form-body">
+					<label>Name<span class="color-red">*</span></label>
+					<div class="input-holder" style="padding-top: 0px;">
+						<input type="text" name="first-name" required><input type="text" name="last-name" required />
+						<span class="light-text">first name</span><span class="light-text">last name</span>
+					</div>
+					<div class="input-holder">
+						<label>Email<span class="color-red">*</span></label><label>Phone Number<span class="color-red">*</span></label>
+						<input type="email" name="email" required><input type="number" name="ph-number" required />
+					</div>
+					<div class="gender-section">
+						<label>Gender</label><br>	
+						<input type="radio" id="option1" name="gender" value="male">
+						<label for="option1">Male</label>
+
+						<input type="radio" id="option2" name="gender" value="female">
+						<label for="option2">Female</label>
+
+						<input type="radio" id="option2" name="gender" value="others">
+						<label for="option2">Others</label>						
+					</div>
+					<div style="height: 10%;position: relative;">
+						<label>Current City</label>
+						<br>
+						<select style="width:40%;height: 50%;">
+							<option value="hyd">Hyd</option>
+  							<option value="Gntr">Gntr</option>
+  							<option value="Krnl">Krnl</option>
+						</select>
+					</div>
+					<div class="input-holder">
+						<label>Applied position</label><label>Earliest possible date</label>
+						<input type="text" name="ap"><input type="date" name="date"/>
+					</div>
+					<br>
+					<label>Preffered Interview Date</label>
+					<div class="interview-section">
+						<input type="date" name="date" id="idate" oninput="displayDate()" />
+						<div style="width:40%"><p id="date-select">Date select &nbsp</p><button onclick="backward()"><i class="fa-solid fa-play rotate"></i></button>&nbsp<button onclick="forward()"><i class="fa-solid fa-play"></i></button><br>
+							<br>
+							&nbsp<button class="slot">11:30</button>
+							<button class="slot">02:30</button><br>
+							 &nbsp<button class="slot">02:30</button>
+							<button class="slot">02:30</button><br>
+							 &nbsp<button class="slot">02:30</button>
+							<button class="slot">02:30</button>
+							<br>
+						</div>
+					</div>
+					<br>
+					<br>
+					<div class="drag-drop"id="drop-area" ondragover="handleDragOver(event)" ondrop="handleFileDrop(event)">
+  						<p>Drag and drop your resume file here</p>
+					</div>
+				</div>
+				<hr>
+				<div class="form-footer">
+					<input type="submit" value="SUBMIT" id="submit-button"/>
+				</div>
+			</form>
+		</div>	
+	</div>
+</body>
+</html>
